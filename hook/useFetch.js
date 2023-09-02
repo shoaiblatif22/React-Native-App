@@ -42,5 +42,12 @@ const fetchData = async () => {
     useEffect(() => {
         fetchData();
     }, []);
+
+    const refetch = () => {
+        setIsLoading(true);
+        fetchData();
+    }
+
+    return { data, isLoading, error, refetch };
 }
 
