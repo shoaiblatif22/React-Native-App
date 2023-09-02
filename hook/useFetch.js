@@ -21,4 +21,26 @@ const useFetch = (endpoint) => {
    params: { ...query },
 };
 
+const fetchData = async () => {
+    setIsLoading(true);
+
+    try {
+        const response = await axios.request(options); 
+            setData(response.data.data);
+            setIsLoading(false);
+
+        } catch (error) { 
+            setError(error);
+            alert('There was an error')
+
+        } finally { 
+            setIsLoading(false);
+
+        }
+    }
+
+    useEffect(() => {
+        fetchData();
+    }, []);
 }
+
