@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
-const useFetch = (endpoint) => {
+const useFetch = (endpoint, query) => {
     const [data, setData] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null); 
@@ -48,5 +48,5 @@ const fetchData = async () => {
     return { data, isLoading, error, refetch };
 }
 
-
+export default useFetch;
 
