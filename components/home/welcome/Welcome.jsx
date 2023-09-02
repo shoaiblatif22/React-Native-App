@@ -57,7 +57,7 @@ const Welcome = () => {
               }}
             
             >
-              <Text>{item}</Text>
+              <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
             </TouchableOpacity>
 
           )}
