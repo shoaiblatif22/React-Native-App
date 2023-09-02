@@ -4,7 +4,8 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  FlatList
+  FlatList,
+  Image
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import styles from './welcome.style'
@@ -23,10 +24,20 @@ const Welcome = () => {
       <View style={styles.searchContainer}>
         <View style={styles.searchWrapper}>
           <TextInput
-            style={styles.searchInput} 
+            style={styles.searchInput}
+            value=""
+            onChange={() => {}}
+            placeholder='What are you looking for?' 
           />
-
         </View>
+
+        <TouchableOpacity style={styles.searchBtn} onPress={() => {}}>
+          <Image
+            source={icons.search}
+            resizeMode="contain"
+            style={styles.searchBtnImage} 
+          />
+        </TouchableOpacity>
       </View>
     </View>
   )
