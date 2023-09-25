@@ -3,17 +3,7 @@ import { View, Text, TouchableOpacity, Image } from 'react-native'
 import styles from './popularjobcard.style'
 
 
-// const sampleData = {
-//   job_id: 1,
-//   employer_logo: 'https://www.pngwing.com/en/free-png-spjgq', // Replace with a valid image URL
-//   employer_name: 'Sample Company',
-//   job_title: 'Sample Job Title',
-// };
-
 const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
-
-
-  // const item = sampleData;
 
   return (
     <TouchableOpacity
