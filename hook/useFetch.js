@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 const useFetch = (endpoint, query) => {
-    const [data, setData] = useState(false);
+    const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null); 
 
@@ -22,12 +22,15 @@ const fetchData = async () => {
     setIsLoading(true);
 
     try {
+        console.log('Fetching data...');
         const response = await axios.request(options); 
+        console.log('Data received:', response.data.data);
             setData(response.data.data);
             setIsLoading(false);
 
         } catch (error) { 
             setError(error);
+            console.error('Error:', error);
             alert('There was an error')
 
         } finally { 
@@ -37,6 +40,7 @@ const fetchData = async () => {
     }
 
     useEffect(() => {
+        console.log('Effect triggered');
         fetchData();
     }, []);
 
