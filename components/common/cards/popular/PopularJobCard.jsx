@@ -3,9 +3,10 @@ import { View, Text, TouchableOpacity, Image } from 'react-native';
 import styles from './popularjobcard.style';
 
 
-const PopularJobCard = ({ item, selectedJob = '', handleCardPress }) => {
-  console.log('item.prop:', item);
-  console.log('selectedJob.prop:', selectedJob);
+
+
+const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
+
   return (
     <TouchableOpacity
       key={item.job_id}
