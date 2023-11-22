@@ -55,4 +55,6 @@ const Home = () => {
     )
 }
 
+//1hr 22 mins for video //
+
 export default Home;
